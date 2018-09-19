@@ -6,7 +6,10 @@
 	$url = 'http://localhost//api/api/server/server.php';
 
 	$curl = new Curl\Curl();
-	$curl->get($url);
+	$curl->post($url, array(
+	    'username'=>'huang',
+	    'password'=>'123456'
+	));
 
 	if($curl->error){
 		echo $curl->error_code;
@@ -15,6 +18,3 @@
 	}
 
 	// 客户端 发起api请求
-	
-
-?>
